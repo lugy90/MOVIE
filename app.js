@@ -62,8 +62,26 @@ app.get('/movie/:id', function(req, res) {
 
 // admin page
 app.get('/admin', function(req, res) {
-  res.render('admin', {
-    title: 'imooc 后台录入页'
+  var _movie = new Movie({
+    doctor: req.body.doctor,
+    title: req.body.title,
+    language: req.body.language,
+    country: req.body.country,
+    year: req.body.year,
+    poster: req.body.poster,
+    flash: req.body.flash,
+    summary: req.body.summary
+  })
+
+  _movie.save(function(err, movie) {
+    if (err) {
+      console.log(err)
+    }
+
+    res.redirect('detail', {
+      title: 'imooc 《' + movie.title + '》',
+      movie: movie
+    })
   })
 })
 
