@@ -1,5 +1,4 @@
 var mongoose = require('mongoose')
-var moment = require('moment')
 
 var MovieSchema = new mongoose.Schema({
   doctor: String,
@@ -11,7 +10,7 @@ var MovieSchema = new mongoose.Schema({
   poster: String,
   flash: String,
   meta: {
-    createdAt: {
+    createAt: {
       type: Date,
       default: Date.now()
     },
@@ -23,8 +22,8 @@ var MovieSchema = new mongoose.Schema({
 })
 
 MovieSchema.pre('save', function(next) {
-  if(this.isNew) {
-    this.meta.createdAt = this.meta.updatedAt = Date.now()
+  if (this.isNew) {
+    this.meta.createAt = this.meta.updatedAt = Date.now()
   }
   else {
     this.meta.updatedAt = Date.now()
@@ -34,13 +33,13 @@ MovieSchema.pre('save', function(next) {
 })
 
 MovieSchema.statics = {
-  fetch: function(id, cb) {
+  fetch: function(cb) {
     return this
       .find({})
       .sort('meta.updatedAt')
       .exec(cb)
   },
-  findByid: function(id, cb) {
+  findById: function(id, cb) {
     return this
       .findOne({_id: id})
       .exec(cb)

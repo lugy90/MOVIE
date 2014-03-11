@@ -1,27 +1,20 @@
 {
-  "name": "imooc-movie",
+  "name": "imooc",
   "version": "0.0.1",
-  "description": "imooc-movie for imooc",
+  "description": "imooc movie",
   "main": "app.js",
   "dependencies": {
     "express": "~3.4.8",
-    "jade": "~1.2.0",
+    "jade": "~1.3.0",
     "mongoose": "~3.8.8"
   },
   "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/huanglong/imooc-movie.git"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "imooc",
-    "movie",
-    "node",
-    "study"
+    "imooc"
   ],
   "author": "Scott",
-  "license": "BSD-2-Clause",
-  "bugs": {
-    "url": "https://github.com/huanglong/imooc-movie/issues"
-  }
+  "license": "BSD-2-Clause"
 }

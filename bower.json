@@ -2,9 +2,8 @@
   "name": "imooc",
   "version": "0.0.1",
   "authors": [
-    "Scott <banruosheng@gmail.com>"
+    "Scott"
   ],
-  "description": "imooc",
   "license": "MIT",
   "ignore": [
     "**/.*",

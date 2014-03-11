@@ -2,11 +2,11 @@ extends ../layout
 
 block content
   .container
-      .row
-        each item in movies
-          .col-md-2
-            .thumbnail
-              img(src="#{item.poster}", alt="#{item.title}")
-              .caption
+    .row
+      each item in movies
+        .col-md-2
+          .thumbnail
+            img(src="#{item.poster}")
+            .caption
               h3 #{item.title}
-              p: a.btn-btn-primary(href="/movie/#{item._id}", role="button") 观看预告片
+              p: a.btn.btn-primary(href="/movie/#{item._id}", role="button") 观看预告片
