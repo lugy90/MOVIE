@@ -4,11 +4,16 @@
   "authors": [
     "Scott"
   ],
+  "description": "movies",
+  "keywords": [
+    "movies"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
+    "public/libs",
     "test",
     "tests"
   ],
