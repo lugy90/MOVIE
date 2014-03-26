@@ -1,6 +1,6 @@
 {
-  "name": "imooc",
-  "version": "0.0.1",
+  "name": "imooc-movie",
+  "version": "0.0.1-4",
   "description": "Sci-fi movies",
   "main": "app.js",
   "dependencies": {
@@ -10,10 +10,14 @@
     "mongoose": "~3.8.8",
     "underscore": "~1.6.0"
   },
-  "devDependencies": {},
+  "subdomain": "imooc-movie",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "./app.js"
   },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "devDependencies": {},
   "keywords": [
     "movies"
   ],

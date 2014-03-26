@@ -6,7 +6,8 @@ var _ = require('underscore')
 var port = 3000
 var app = express()
 
-mongoose.connect('mongodb://localhost/imooc')
+//mongoose.connect('mongodb://localhost/imooc')
+mongoose.connect('mongodb://nodejitsu_wolf18387:iu4rgdu4djkq3j0afobj3hvu86@ds061548.mongolab.com:61548/nodejitsu_wolf18387_nodejitsudb9547922664')
 
 app.set('views', './views/pages')
 app.set('view engine', 'jade')
