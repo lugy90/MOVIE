@@ -8,9 +8,7 @@ module.exports = function(app) {
   app.use(function(req, res, next) {
     var _user = req.session.user
 
-    if (_user) {
-      app.locals.user = _user
-    }
+    app.locals.user = _user
 
     return next()
   })
