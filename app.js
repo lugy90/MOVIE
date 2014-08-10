@@ -8,7 +8,7 @@ var dbUrl = 'mongodb://localhost/imooc'
 
 mongoose.connect(dbUrl)
 
-app.set('views', './views/pages')
+app.set('views', './app/views/pages')
 app.set('view engine', 'jade')
 app.use(express.bodyParser())
 app.use(express.cookieParser())
