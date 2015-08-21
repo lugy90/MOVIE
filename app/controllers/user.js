@@ -1,4 +1,5 @@
-var User = require('../models/user')
+var mongoose = require('mongoose')
+var User = mongoose.model('User')
 
 // signup
 exports.showSignup = function(req, res) {
@@ -16,7 +17,7 @@ exports.showSignin = function(req, res) {
 exports.signup = function(req, res) {
   var _user = req.body.user
 
-  User.find({name: _user.name},  function(err, user) {
+  User.findOne({name: _user.name},  function(err, user) {
     if (err) {
       console.log(err)
     }
@@ -25,8 +26,7 @@ exports.signup = function(req, res) {
       return res.redirect('/signin')
     }
     else {
-      var user = new User(_user)
-
+      user = new User(_user)
       user.save(function(err, user) {
         if (err) {
           console.log(err)
