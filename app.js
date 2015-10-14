@@ -39,11 +39,8 @@ var walk = function(path) {
 walk(models_path)
 app.set('views', './app/views/pages')
 app.set('view engine', 'jade')
-// create application/json parser
-var jsonParser = bodyParser.json()
-
-// create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser())
 
 app.use(session({
