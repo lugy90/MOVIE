@@ -3,13 +3,13 @@ var User = mongoose.model('User')
 
 // signup
 exports.showSignup = function(req, res) {
-  res.render('signup', {
+  res.render('pages/signup', {
     title: '注册页面'
   })
 }
 
 exports.showSignin = function(req, res) {
-  res.render('signin', {
+  res.render('pages/signin', {
     title: '登录页面'
   })
 }
@@ -85,7 +85,7 @@ exports.list = function(req, res) {
       console.log(err)
     }
 
-    res.render('userlist', {
+    res.render('pages/userlist', {
       title: 'imooc 用户列表页',
       users: users
     })
